@@ -1,0 +1,37 @@
+# Cocogitto Configuration for ekgf-website
+# https://docs.cocogitto.io/
+
+# Tag prefix (v0.0.1, v0.0.2, etc.)
+tag_prefix = "v"
+
+# Root-level hooks run automatically (no --hook-profile flag needed)
+pre_bump_hooks = [
+    # Update version in package.json using pnpm (updates package.json and pnpm-lock.yaml)
+    "pnpm version {{version}} --no-git-tag-version --allow-same-version",
+    # Stage the updated files
+    "git add package.json pnpm-lock.yaml",
+]
+
+post_bump_hooks = []
+
+[changelog]
+path = "CHANGELOG.md"
+template = "remote"
+remote = "github.com"
+repository = "ekgf-website"
+owner = "EKGF"
+authors = [{ username = "jgeluk", signature = "Jacobus Geluk" }]
+
+# Angular-style commit types (matching your commitlint config)
+[commit_types]
+feat = { changelog_title = "Features" }
+fix = { changelog_title = "Bug Fixes" }
+docs = { changelog_title = "Documentation" }
+style = { changelog_title = "Styling", omit_from_changelog = true }
+refactor = { changelog_title = "Code Refactoring" }
+perf = { changelog_title = "Performance Improvements" }
+test = { changelog_title = "Tests", omit_from_changelog = true }
+build = { changelog_title = "Build System" }
+ci = { changelog_title = "Continuous Integration", omit_from_changelog = true }
+chore = { changelog_title = "Miscellaneous Chores", omit_from_changelog = true }
+revert = { changelog_title = "Reverts" }

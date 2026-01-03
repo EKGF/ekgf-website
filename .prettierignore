@@ -1,0 +1,31 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+.next
+out
+build
+dist
+
+# Package files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Cache
+.cache
+.turbo
+
+# Misc
+.DS_Store
+*.log
+*.tsbuildinfo
+
+# Git
+.git
+.husky/_
+
+# Generated files
+CHANGELOG.md
+CHANGELOG_RELEASE.md

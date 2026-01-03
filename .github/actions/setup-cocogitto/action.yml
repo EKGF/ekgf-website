@@ -1,0 +1,72 @@
+name: Setup Cocogitto
+description:
+  Install Cocogitto with caching for version management and changelog
+  generation
+
+runs:
+  using: composite
+  steps:
+    - name: Cache cocogitto binary
+      uses: actions/cache@v4
+      id: cache-cog
+      with:
+        path:
+          ~/.local/bin/cog${{ runner.os == 'Windows' && '.exe' || ''
+          }}
+        key: cocogitto-6.1.0-${{ runner.os }}-${{ runner.arch }}
+
+    - name: Install cocogitto if not cached
+      if: steps.cache-cog.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        echo "Installing cocogitto..."
+        mkdir -p ~/.local/bin
+
+        # Detect OS and architecture
+        OS="${{ runner.os }}"
+        ARCH="${{ runner.arch }}"
+
+        case "$OS" in
+          Linux)
+            PLATFORM="x86_64-unknown-linux-musl"
+            ;;
+          macOS)
+            if [ "$ARCH" = "ARM64" ]; then
+              PLATFORM="aarch64-apple-darwin"
+            else
+              PLATFORM="x86_64-apple-darwin"
+            fi
+            ;;
+          Windows)
+            PLATFORM="x86_64-pc-windows-msvc"
+            ;;
+          *)
+            echo "Unsupported OS: $OS"
+            exit 1
+            ;;
+        esac
+
+        # Download and install
+        VERSION="6.1.0"
+        URL="https://github.com/cocogitto/cocogitto/releases/download/${VERSION}/cocogitto-${VERSION}-${PLATFORM}.tar.gz"
+
+        echo "Downloading from: $URL"
+        curl -sSfL "$URL" | tar xz -C ~/.local/bin
+        chmod +x ~/.local/bin/cog
+        echo "✓ cocogitto installed"
+
+    - name: Add to PATH
+      shell: bash
+      run: echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+    - name: Verify installation
+      shell: bash
+      run: |
+        COG_BIN="$HOME/.local/bin/cog${{ runner.os == 'Windows' && '.exe' || '' }}"
+        if [ -f "$COG_BIN" ]; then
+          chmod +x "$COG_BIN"
+          "$COG_BIN" --version
+        else
+          echo "❌ Error: cog binary not found at $COG_BIN"
+          exit 1
+        fi
