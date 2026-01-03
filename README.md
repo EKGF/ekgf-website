@@ -120,4 +120,7 @@ ekgf-website/
 
 ## License
 
-[License information to be added]
+MIT License - Copyright (c) 2026 Object Management Group, Inc.
+(OMG)
+
+See [LICENSE](LICENSE) file for details.
