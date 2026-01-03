@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   extends: ["@commitlint/config-angular"],
   rules: {
     // Angular style: stricter rules
@@ -14,5 +14,3 @@ const config = {
     "scope-case": [2, "always", "lower-case"],
   },
 };
-
-export default config;
