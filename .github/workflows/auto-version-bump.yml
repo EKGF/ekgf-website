@@ -21,7 +21,8 @@ jobs:
     name: Check if Dependency Update
     runs-on: ubuntu-latest
     outputs:
-      is_dependency_update: ${{ steps.check.outputs.is_dependency_update }}
+      is_dependency_update:
+        ${{ steps.check.outputs.is_dependency_update }}
       commit_message: ${{ steps.commit.outputs.message }}
     steps:
       - uses: actions/checkout@v4
@@ -56,7 +57,9 @@ jobs:
     name: Bump Version & Release
     runs-on: ubuntu-latest
     needs: check-dependency-update
-    if: needs.check-dependency-update.outputs.is_dependency_update == 'true'
+    if:
+      needs.check-dependency-update.outputs.is_dependency_update ==
+      'true'
     steps:
       - uses: actions/checkout@v4
         with:
