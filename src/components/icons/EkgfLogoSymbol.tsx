@@ -14,7 +14,9 @@ export function EkgfLogoSymbol({
 }: EkgfLogoSymbolProps) {
   return (
     <svg
-      viewBox="0 0 200 200"
+      // Tighten the viewBox to the actual drawn bounds so the symbol centers
+      // nicely next to "EKGF" without needing big translate hacks.
+      viewBox="12 30 170 170"
       role="img"
       aria-label={title}
       xmlns="http://www.w3.org/2000/svg"
@@ -47,4 +49,3 @@ export function EkgfLogoSymbol({
     </svg>
   );
 }
-

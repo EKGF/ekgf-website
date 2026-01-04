@@ -23,10 +23,10 @@ export function Header() {
         <div className="flex items-center gap-8">
           <Link
             href="/"
-            className="flex items-center group gap-0 text-3xl"
+            className="flex items-center group gap-2 text-3xl leading-none"
           >
-            <EkgfLogoSymbol className="h-[1em] w-[1em] -mr-3 transition-transform group-hover:scale-110" />
-            <span className="hidden font-black tracking-tighter leading-none relative top-[-6px] sm:inline-block">
+            <EkgfLogoSymbol className="h-[1em] w-[1em] -translate-y-px transition-transform group-hover:scale-110" />
+            <span className="hidden font-black tracking-tighter leading-none sm:inline-block">
               EKGF
             </span>
           </Link>
