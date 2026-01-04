@@ -64,8 +64,9 @@ export function DocumentationGrid() {
             Documentation & Resources
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Explore our comprehensive documentation to build and
-            deploy enterprise knowledge graphs
+            Explore principles, methods, and work products to build
+            governed enterprise knowledge graphs and keep GenAI
+            grounded in context
           </p>
         </div>
 
@@ -76,7 +77,7 @@ export function DocumentationGrid() {
               <a key={site.url} href={site.url} className="group">
                 <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 hover:border-[#4051b5]">
                   <CardHeader>
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-[#4051b5] to-[#303f9f] text-white">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-linear-to-br from-[#4051b5] to-[#303f9f] text-white">
                       <Icon className="h-6 w-6" />
                     </div>
                     <CardTitle className="text-xl group-hover:text-[#4051b5] transition-colors">

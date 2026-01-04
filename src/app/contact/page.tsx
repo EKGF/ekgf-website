@@ -12,7 +12,7 @@ import {
 export const metadata = {
   title: "Contact | EKGF",
   description:
-    "Get in touch with the Enterprise Knowledge Graph Forum team. We are here to help with your EKG journey.",
+    "Get in touch with the Enterprise Knowledge Graph Forum team. Let’s talk about governed EKGs and keeping GenAI grounded in context.",
 };
 
 export default function ContactPage() {
@@ -24,8 +24,8 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-xl text-muted-foreground">
-            Have questions about enterprise knowledge graphs? We are
-            here to help.
+            Have questions about Enterprise Knowledge Graphs, governed
+            access, or safe GenAI? We are here to help.
           </p>
         </div>
 

@@ -17,7 +17,7 @@ import {
 export const metadata = {
   title: "Resources | EKGF",
   description:
-    "Access comprehensive resources, documentation, and tools for enterprise knowledge graph development.",
+    "Resources, documentation, and tools for building governed Enterprise Knowledge Graphs and keeping GenAI grounded in context.",
 };
 
 export default function ResourcesPage() {
@@ -30,8 +30,8 @@ export default function ResourcesPage() {
           </h1>
           <p className="text-xl text-muted-foreground">
             Access our comprehensive documentation, tools, and
-            community resources for building enterprise knowledge
-            graphs.
+            community resources for building governed enterprise
+            knowledge graphs and safe GenAI use cases.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function ResourcesPage() {
                     EKG Catalog
                   </CardTitle>
                   <CardDescription>
-                    Components, patterns, and best practices
+                    Components, patterns, and implementation guidance
                   </CardDescription>
                   <ExternalLink className="h-4 w-4 ml-auto text-muted-foreground" />
                 </CardHeader>
@@ -164,8 +164,9 @@ export default function ResourcesPage() {
                 Need Help?
               </CardTitle>
               <CardDescription className="text-white/90 text-base mt-4">
-                Our team is here to support your enterprise knowledge
-                graph journey. Reach out with questions or feedback.
+                Our team is here to support your governed EKG journey
+                and safe GenAI adoption. Reach out with questions or
+                feedback.
               </CardDescription>
               <div className="mt-6">
                 <Button

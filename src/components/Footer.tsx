@@ -9,8 +9,9 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">About EKGF</h3>
             <p className="text-sm text-muted-foreground">
-              Enterprise Knowledge Graph - Promoting semantic
-              standards and best practices.
+              Keep GenAI grounded in context for secure, high-quality
+              decisions. EKGF is the Enterprise Knowledge Graph Forum
+              at OMG.
             </p>
           </div>
 

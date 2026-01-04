@@ -22,7 +22,7 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: "Enterprise Knowledge Graph | EKGF",
   description:
-    "Promoting semantic standards and best practices to support the growing enterprise knowledge graph marketplace. Explore the Use Case Tree Method, EKG Catalog, Maturity Model, and Principles.",
+    "Keep GenAI grounded in context for secure, high-quality decisions. Explore EKGF’s principles, methods, and work products for building governed Enterprise Knowledge Graphs.",
   keywords: [
     "Enterprise Knowledge Graph",
     "EKG",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Enterprise Knowledge Graph",
     description:
-      "Promoting semantic standards and best practices for enterprise knowledge graphs",
+      "Keep GenAI grounded in context for secure, high-quality decisions.",
     url: "https://ekgf.org",
     siteName: "EKGF",
     type: "website",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Enterprise Knowledge Graph",
     description:
-      "Promoting semantic standards and best practices for enterprise knowledge graphs",
+      "Keep GenAI grounded in context for secure, high-quality decisions.",
     site: "@EKG_Foundation",
   },
 };

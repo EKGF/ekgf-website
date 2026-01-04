@@ -11,7 +11,7 @@ import {
 export const metadata = {
   title: "About | EKGF",
   description:
-    "Learn about the Enterprise Knowledge Graph Forum and our mission to promote semantic standards and best practices.",
+    "Learn about the Enterprise Knowledge Graph Forum (EKGF) at OMG and our mission: keep GenAI grounded in context for secure, high-quality decisions.",
 };
 
 export default function AboutPage() {
@@ -26,8 +26,10 @@ export default function AboutPage() {
           <p className="text-xl text-muted-foreground mb-8">
             The Enterprise Knowledge Graph Forum (EKGF) is an
             initiative under the Object Management Group® (OMG®),
-            established to define best practices and mature the
-            marketplace for Enterprise Knowledge Graph (EKG) adoption.
+            established to advance Enterprise Knowledge Graphs (EKGs)
+            as a governed semantic layer—so GenAI and people can
+            operate with shared meaning, trusted facts, and safe
+            access.
           </p>
 
           <p>
@@ -71,7 +73,7 @@ export default function AboutPage() {
                 </a>
               </p>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li>Practical guidance and best practices</li>
+                <li>Practical guidance and reusable patterns</li>
                 <li>Reusable artifacts and reference materials</li>
                 <li>
                   Work products like the{" "}
@@ -163,11 +165,10 @@ export default function AboutPage() {
                 Our Mission
               </h3>
               <p className="text-muted-foreground">
-                To make Enterprise Knowledge Graph adoption practical
-                and sustainable—by publishing community-driven
-                guidance (Principles, Method, Maturity Model, Catalog,
-                DPROD), promoting semantic interoperability, and
-                shaping standards with OMG where it matters.
+                Keep GenAI grounded in context for secure,
+                high-quality decisions—by publishing principles,
+                methods, and work products that make EKGs practical
+                and governed.
               </p>
             </div>
 
@@ -178,7 +179,8 @@ export default function AboutPage() {
               </h3>
               <p className="text-muted-foreground">
                 Bringing together experts, practitioners, and
-                organizations to share knowledge and best practices.
+                organizations to build governed EKG foundations and
+                share reusable patterns.
               </p>
             </div>
 
@@ -207,29 +209,30 @@ export default function AboutPage() {
             1. Semantic Technology Growth
           </h3>
           <p>
-            We promote the adoption and advancement of semantic
-            technologies that enable organizations to create, manage,
-            and leverage enterprise knowledge graphs effectively.
+            We advance semantics-first approaches that define shared
+            meaning (concepts, relationships, rules) and connect that
+            meaning to facts—so both people and machines can interpret
+            data consistently.
           </p>
 
           <h3 className="text-2xl font-semibold mt-8 mb-4">
             2. Best Practices Development
           </h3>
           <p>
-            Through our comprehensive documentation and frameworks,
-            including the Use Case Tree Method and Maturity Model, we
-            provide practical guidance for implementing knowledge
-            graphs at enterprise scale.
+            Through our documentation and frameworks (Principles,
+            Method, Maturity Model, Catalog, DPROD), we provide
+            practical, reusable guidance for building and evolving
+            governed EKGs.
           </p>
 
           <h3 className="text-2xl font-semibold mt-8 mb-4">
             3. Quality Standards
           </h3>
           <p>
-            We develop shared infrastructure and standards for
-            evaluating data quality, ensuring that enterprise
-            knowledge graphs meet the highest standards of accuracy,
-            completeness, and reliability.
+            We emphasize quality, provenance, and governance—because
+            the value of an EKG (and safe GenAI) depends on
+            trustworthy context, secure access, and high-confidence
+            facts.
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">

@@ -19,7 +19,7 @@ import {
 export const metadata = {
   title: "Membership | EKGF",
   description:
-    "Join the Enterprise Knowledge Graph Forum (EKGF). Learn how membership works across the OMG Managed Community and the EKG Platform Task Force (EKGPTF).",
+    "Join the Enterprise Knowledge Graph Forum (EKGF). Help keep GenAI grounded in context through governed Enterprise Knowledge Graphs, and learn how membership works across OMG.",
 };
 
 const omgManagedCommunityUrl =

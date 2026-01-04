@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 export const metadata = {
   title: "Principles & Manifesto | EKGF",
   description:
-    "Core principles and manifesto for Enterprise Knowledge Graphs, guiding strategic implementation.",
+    "Core principles for Enterprise Knowledge Graphs—guiding governed implementation and keeping GenAI grounded in context.",
 };
 
 export default function PrinciplesRedirectPage() {
