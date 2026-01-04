@@ -73,10 +73,9 @@ export const Testimonials = ({
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t, idx) => (
+          {testimonials.map((t) => (
             <Card
-              // eslint-disable-next-line react/no-array-index-key
-              key={`${t.name}-${idx}`}
+              key={`${t.name}-${t.quote}`}
               className="h-full border-2 bg-background/60 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-[#4051b5]"
             >
               <CardContent className="pt-6">

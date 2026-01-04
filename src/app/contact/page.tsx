@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
 import {
   Mail,
   MapPin,
+  Users,
   Twitter,
   Linkedin,
   Github,
@@ -73,6 +75,19 @@ export default function ContactPage() {
                     >
                       omg.org
                     </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Users className="h-5 w-5 text-[#4051b5] mt-0.5" />
+                  <div>
+                    <p className="font-medium">Leadership Team</p>
+                    <Link
+                      href="/team"
+                      className="text-sm text-primary hover:underline transition-colors"
+                    >
+                      Meet the team
+                    </Link>
                   </div>
                 </div>
               </div>

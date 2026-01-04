@@ -21,10 +21,10 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/dprod"
+                  href="/quadrants"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  DPROD
+                  The EKG Quadrants
                 </Link>
               </li>
               <li>
@@ -67,6 +67,14 @@ export function Footer() {
                   Principles
                 </a>
               </li>
+              <li>
+                <Link
+                  href="/dprod"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  DPROD
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -83,18 +91,18 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/team"
+                  href="/membership"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Team
+                  Membership
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/quadrants"
+                  href="/team"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  The EKG Quadrants
+                  Team
                 </Link>
               </li>
               <li>

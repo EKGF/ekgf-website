@@ -264,6 +264,9 @@ export default function AboutPage() {
                 <Link href="/contact">Contact Us</Link>
               </Button>
               <Button asChild variant="outline">
+                <Link href="/team">Meet the team</Link>
+              </Button>
+              <Button asChild variant="outline">
                 <a
                   href="https://github.com/EKGF"
                   target="_blank"

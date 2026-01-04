@@ -48,14 +48,6 @@ export function Header() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <Link href="/team">Team</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={navigationMenuTriggerStyle()}
-                >
                   <Link href="/quadrants">Quadrants</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -65,6 +57,14 @@ export function Header() {
                   className={navigationMenuTriggerStyle()}
                 >
                   <Link href="/resources">Resources</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/membership">Membership</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
