@@ -12,9 +12,18 @@ export default function HomePage() {
         <div className="container max-w-screen-2xl">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight">
-              About EKGF
+              What is an Enterprise Knowledge Graph (EKG)?
             </h2>
             <p className="mb-4 text-lg text-muted-foreground">
+              An EKG is a semantics-first foundation for an
+              enterprise: it defines context (concepts, relationships,
+              rules) and connects that meaning to high-quality,
+              reusable facts and data products—so systems can
+              interpret data consistently. In practice, it acts as a
+              governed semantic layer in front of your internal and
+              relevant external systems.
+            </p>
+            <p className="text-lg text-muted-foreground">
               The Enterprise Knowledge Graph Forum (EKGF) is an
               initiative under the{" "}
               <a
@@ -25,15 +34,9 @@ export default function HomePage() {
               >
                 Object Management Group (OMG)
               </a>
-              , established to define best practices and mature the
-              marketplace for Enterprise Knowledge Graph (EKG)
-              adoption.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              Our work spans standards, methods, reusable artifacts,
-              community engagement, and advocacy—helping teams design,
-              build, and improve enterprise knowledge graphs over
-              time.
+              , publishing principles, methods, and work products that
+              help teams build trustworthy EKGs—and pair them with
+              GenAI safely.
             </p>
           </div>
         </div>
