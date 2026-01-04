@@ -3,8 +3,8 @@ import { Twitter, Linkedin, Github } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-background">
-      <div className="container py-12 md:py-16">
+    <footer className="border-t border-border/20 bg-background/50">
+      <div className="container py-12 md:py-24 px-4 md:px-6">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div>
             <h3 className="mb-4 text-lg font-semibold">About EKGF</h3>

@@ -11,7 +11,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="container py-16 md:py-24">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-screen-2xl">
         <h1 className="mb-8 text-4xl font-bold tracking-tight md:text-5xl">
           About EKGF
         </h1>

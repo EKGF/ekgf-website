@@ -51,77 +51,73 @@
 :root {
   --radius: 0.5rem;
 
-  /* EKGF Brand Colors - Light Mode */
-  --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 240 10% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
+  /* EKGF Light Mode - Valid CSS colors */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 10% 3.9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(240 10% 3.9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(240 10% 3.9%);
 
-  /* EKGF Primary: #4051b5 */
-  --primary: 233 48% 48%;
-  --primary-foreground: 0 0% 100%;
+  --primary: hsl(233 48% 48%);
+  --primary-foreground: hsl(0 0% 100%);
 
-  --secondary: 240 4.8% 95.9%;
-  --secondary-foreground: 240 5.9% 10%;
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary-foreground: hsl(240 5.9% 10%);
 
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
+  --muted: hsl(240 4.8% 95.9%);
+  --muted-foreground: hsl(240 3.8% 46.1%);
 
-  /* EKGF Accent: #ff6f00 */
-  --accent: 29 100% 50%;
-  --accent-foreground: 0 0% 100%;
+  --accent: hsl(29 100% 50%);
+  --accent-foreground: hsl(0 0% 100%);
 
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 100%);
 
-  --border: 240 5.9% 90%;
-  --input: 240 5.9% 90%;
-  --ring: 233 48% 48%;
+  --border: hsl(240 5.9% 90%);
+  --input: hsl(240 5.9% 90%);
+  --ring: hsl(233 48% 48%);
 
-  --chart-1: 233 48% 48%;
-  --chart-2: 29 100% 50%;
-  --chart-3: 173 58% 39%;
-  --chart-4: 43 74% 66%;
-  --chart-5: 27 87% 67%;
+  --chart-1: hsl(233 48% 48%);
+  --chart-2: hsl(29 100% 50%);
+  --chart-3: hsl(173 58% 39%);
+  --chart-4: hsl(43 74% 66%);
+  --chart-5: hsl(27 87% 67%);
 }
 
 .dark {
-  /* EKGF Brand Colors - Dark Mode (Cooler, Moody Palette) */
-  --background: 225 36% 12%;
-  --foreground: 0 0% 96%;
-  --card: 226 28% 17%;
-  --card-foreground: 0 0% 96%;
-  --popover: 226 28% 17%;
-  --popover-foreground: 0 0% 96%;
+  /* Ultra-Soft Obsidian - Low Contrast & Stylish */
+  --background: hsl(240 10% 8%); /* Slightly lighter than pure black */
+  --foreground: hsl(240 5% 70%); /* Muted grey, not white */
+  --card: hsl(240 10% 10%);
+  --card-foreground: hsl(240 5% 70%);
+  --popover: hsl(240 10% 10%);
+  --popover-foreground: hsl(240 5% 70%);
 
-  /* Electric primary derived from the EKGF blue */
-  --primary: 229 70% 68%;
-  --primary-foreground: 0 0% 100%;
+  --primary: hsl(226 25% 60%);
+  --primary-foreground: hsl(240 10% 8%);
 
-  --secondary: 226 22% 22%;
-  --secondary-foreground: 0 0% 96%;
+  --secondary: hsl(240 5% 15%);
+  --secondary-foreground: hsl(240 5% 70%);
 
-  --muted: 226 18% 26%;
-  --muted-foreground: 225 16% 72%;
+  --muted: hsl(240 5% 15%);
+  --muted-foreground: hsl(240 5% 45%);
 
-  /* Warm accent to balance the cool palette */
-  --accent: 28 92% 60%;
-  --accent-foreground: 0 0% 100%;
+  --accent: hsl(25 20% 50%);
+  --accent-foreground: hsl(0 0% 90%);
 
-  --destructive: 0 68% 48%;
-  --destructive-foreground: 0 0% 98%;
+  --destructive: hsl(0 30% 45%);
+  --destructive-foreground: hsl(0 0% 90%);
 
-  --border: 226 26% 32%;
-  --input: 226 26% 32%;
-  --ring: 229 70% 68%;
+  --border: hsl(240 5% 18%);
+  --input: hsl(240 5% 18%);
+  --ring: hsl(226 25% 60%);
 
-  --chart-1: 229 70% 68%;
-  --chart-2: 28 92% 60%;
-  --chart-3: 173 58% 46%;
-  --chart-4: 43 74% 64%;
-  --chart-5: 27 87% 62%;
+  --chart-1: hsl(226 25% 60%);
+  --chart-2: hsl(25 20% 50%);
+  --chart-3: hsl(173 30% 45%);
+  --chart-4: hsl(43 40% 55%);
+  --chart-5: hsl(27 50% 55%);
 }
 
 @layer base {
@@ -131,26 +127,9 @@
   body {
     @apply bg-background text-foreground antialiased;
     min-height: 100vh;
-    background-color: hsl(var(--background));
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   .dark body {
     color-scheme: dark;
-    background-color: hsl(var(--background));
-    background-image:
-      radial-gradient(
-        circle at 20% 20%,
-        hsl(229 60% 20% / 0.55),
-        transparent 55%
-      ),
-      radial-gradient(
-        circle at 80% -10%,
-        hsl(265 65% 24% / 0.45),
-        transparent 50%
-      ),
-      linear-gradient(135deg, hsl(227 32% 14%), hsl(230 28% 10%));
-    background-attachment: fixed;
   }
   .container {
     @apply mx-auto;

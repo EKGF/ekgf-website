@@ -58,7 +58,7 @@ const documentationSites = [
 export function DocumentationGrid() {
   return (
     <section className="py-16 md:py-24">
-      <div className="container">
+      <div className="container max-w-screen-2xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Documentation & Resources
