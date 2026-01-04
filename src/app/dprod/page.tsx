@@ -265,6 +265,61 @@ export default function DProdPage() {
 
             <div className="rounded-lg border p-6">
               <div className="flex items-start gap-4">
+                <BookOpen className="mt-1 h-6 w-6 text-[#ff6f00]" />
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold">
+                    agnos.ai: Beyond Data Mesh—how Virtual Knowledge
+                    Graphs prevent “Data Mess”
+                  </h3>
+                  <p className="text-muted-foreground">
+                    A perspective on why “data products” alone are not
+                    enough—without a semantic foundation,
+                    decentralized ownership tends to create
+                    fragmentation. Links Data Mesh concepts to
+                    operational knowledge graphs and governance.
+                  </p>
+                  <a
+                    href="https://agnos.ai/insights/article/beyond-data-mesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center font-medium text-[#4051b5] hover:text-[#5c6bc0] transition-colors"
+                  >
+                    Read the article{" "}
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-lg border p-6">
+              <div className="flex items-start gap-4">
+                <BookOpen className="mt-1 h-6 w-6 text-[#4051b5]" />
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold">
+                    Podcast: Knowledge-first Data Products &amp; the
+                    Data Economy (Jacobus Geluk)
+                  </h3>
+                  <p className="text-muted-foreground">
+                    A discussion of use case-driven approaches and
+                    semantic coordination as foundations for scalable
+                    data product marketplaces—useful context for why
+                    standards like DPROD matter.
+                  </p>
+                  <a
+                    href="https://agnos.ai/insights/podcast/knowledge-graph-data-economy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center font-medium text-[#4051b5] hover:text-[#5c6bc0] transition-colors"
+                  >
+                    Open the podcast page{" "}
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-lg border p-6">
+              <div className="flex items-start gap-4">
                 <BookOpen className="mt-1 h-6 w-6 text-[#4051b5]" />
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold">
