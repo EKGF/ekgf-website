@@ -75,6 +75,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/quadrants"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  The EKG Quadrants
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/resources"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
