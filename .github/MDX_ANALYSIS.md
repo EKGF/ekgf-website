@@ -1,8 +1,7 @@
 # MDX Implementation Analysis
 
-Analysis of MDX implementations in business-composer and
-agnos-website repositories to determine the best approach for
-ekgf-website.
+Analysis of MDX implementations in business-composer and agnos-website
+repositories to determine the best approach for ekgf-website.
 
 ## Key Findings
 
@@ -11,8 +10,8 @@ ekgf-website.
 **Status:** Contentlayer is abandoned/deprecated and should be avoided
 for new projects.
 
-- business-composer still uses `contentlayer2` (fork) but this is
-  not recommended
+- business-composer still uses `contentlayer2` (fork) but this is not
+  recommended
 - agnos-website has moved away from Contentlayer
 
 ### 2. Modern MDX Approaches
@@ -309,8 +308,7 @@ app/
 
 ## Migration Path from Contentlayer
 
-If we ever need to migrate content from a Contentlayer-based
-project:
+If we ever need to migrate content from a Contentlayer-based project:
 
 1. **Extract MDX files** from content directory
 2. **Convert** contentlayer.config.ts schema to TypeScript types
@@ -386,16 +384,11 @@ title: Test
 
 ### References
 
-- [Next.js MDX
-  Documentation](https://nextjs.org/docs/app/building-your-application/configuring/mdx)
-- [next-mdx-remote
-  GitHub](https://github.com/hashicorp/next-mdx-remote)
-- [MDX
-  Documentation](https://mdxjs.com/docs/getting-started/)
-- [Remark
-  Plugins](https://github.com/remarkjs/remark/blob/main/doc/plugins.md)
-- [Rehype
-  Plugins](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md)
+- [Next.js MDX Documentation](https://nextjs.org/docs/app/building-your-application/configuring/mdx)
+- [next-mdx-remote GitHub](https://github.com/hashicorp/next-mdx-remote)
+- [MDX Documentation](https://mdxjs.com/docs/getting-started/)
+- [Remark Plugins](https://github.com/remarkjs/remark/blob/main/doc/plugins.md)
+- [Rehype Plugins](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md)
 
 ## Decision
 
@@ -406,5 +399,5 @@ title: Test
 - 🎯 **Plan** - Use @next/mdx + next-mdx-remote when time comes
 - ❌ **Avoid** - Never use Contentlayer
 
-This analysis will serve as a guide when MDX support is required
-in the future.
+This analysis will serve as a guide when MDX support is required in
+the future.

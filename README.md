@@ -1,26 +1,117 @@
 # EKGF Website
 
-Official website for the Enterprise Knowledge Graph Foundation.
+Modern, responsive website for the Enterprise Knowledge Graph
+Foundation (EKGF), built with Next.js 15, TypeScript, and Tailwind
+CSS.
 
-[![CI](https://github.com/EKGF/ekgf-website/actions/workflows/ci.yml/badge.svg)](https://github.com/EKGF/ekgf-website/actions/workflows/ci.yml)
+## Overview
+
+This is the main landing page and portal for EKGF, serving as the
+central hub linking to all documentation sites:
+
+- **Method**: [method.ekgf.org](https://method.ekgf.org) - Use Case
+  Tree Method
+- **Catalog**: [catalog.ekgf.org](https://catalog.ekgf.org) - EKG
+  Catalog
+- **Maturity**: [maturity.ekgf.org](https://maturity.ekgf.org) -
+  Maturity Model
+- **Principles**: [principles.ekgf.org](https://principles.ekgf.org) -
+  Principles & Manifesto
+- **DPROD**: [ekgf.github.io/dprod](https://ekgf.github.io/dprod) -
+  Data Product Ontology
+
+## Features
+
+- ✨ **Modern Stack**: Next.js 15 with App Router, React 19,
+  TypeScript
+- 🎨 **Beautiful UI**: Tailwind CSS v4 + shadcn/ui components
+- 🌓 **Dark Mode**: System-aware theme with manual toggle
+- 📱 **Responsive**: Mobile-first design
+- ♿ **Accessible**: WCAG 2.1 compliant
+- 🚀 **Fast**: Optimized for performance
+- 📊 **Analytics**: Google Analytics integration
+- 📧 **Contact Form**: Server Actions for form handling
+- 🔍 **SEO**: Comprehensive metadata and sitemap
+- 🎯 **EKGF Branding**: Custom color scheme matching existing docs
+
+## EKGF Activities
+
+The website showcases five main activities of EKGF:
+
+### 1. Use Case Tree Method
+
+Comprehensive methodology for EKG development through use case trees
+and structured implementation.
+
+### 2. EKG Catalog
+
+Browse the catalog of EKG components, patterns, and best practices for
+building knowledge graphs.
+
+### 3. Maturity Model
+
+Assessment framework for evaluating and improving EKG implementations.
+
+### 4. Principles & Manifesto
+
+Core principles for Enterprise Knowledge Graphs, guiding strategic
+implementation.
+
+### 5. Data Product Ontology (DPROD)
+
+**OMG standard** for describing Data Products using W3C technologies.
+DPROD enables:
+
+- Decentralized data architectures (Data Mesh)
+- Standardized metadata across platforms
+- Input/output port definitions with DCAT Data Services
+- Integration with ODRL (rights), PROV (lineage), and DQV (quality)
+
+DPROD is built on W3C technologies (DCAT, RDF, OWL, SHACL, PROV) and
+is standardized by the Object Management Group (OMG). The DPROD page
+(`/dprod`) provides an overview before linking to the full
+specification at `https://ekgf.github.io/dprod/`.
 
 ## Tech Stack
 
-- **Framework:** [Next.js 16](https://nextjs.org) (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS 4
-- **Package Manager:** pnpm
-- **UI Components:** Radix UI, Lucide Icons
-- **Deployment:** Vercel
+### Core
+
+- **Next.js 15** - Latest stable, App Router
+- **TypeScript 5** - Type safety
+- **React 19** - UI library
+
+### Styling
+
+- **Tailwind CSS 4** - Utility-first CSS
+- **shadcn/ui** - Component library
+- **Lucide React** - Icon library
+- **next-themes** - Dark mode support
+
+### Forms & Validation
+
+- **Zod** - Schema validation
+- **React Server Actions** - Form handling
+
+### SEO & Analytics
+
+- **@next/third-parties** - Google Analytics
+- **Next.js Metadata API** - SEO optimization
+
+### Dev Tools
+
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+- **Husky** - Git hooks
+- **Commitlint** - Commit message linting
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 20 or later
-- pnpm 10 or later (install: `corepack enable`)
+- Node.js 20+
+- pnpm 10+
 
-### Development Setup
+### Installation
 
 ```bash
 # Install dependencies
@@ -28,99 +119,155 @@ pnpm install
 
 # Run development server
 pnpm dev
+
+# Open browser
+open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
-
-### Available Commands
+### Development Commands
 
 ```bash
-pnpm dev          # Start development server
-pnpm build        # Build for production
-pnpm start        # Start production server
-pnpm lint         # Run ESLint
-pnpm lint:md      # Lint markdown files
-pnpm format       # Format all files
-pnpm format:check # Check formatting
-```
+# Start dev server
+pnpm dev
 
-## Contributing
+# Build for production
+pnpm build
 
-This project enforces **Angular style Conventional Commits** and
-**strict formatting standards**.
+# Start production server
+pnpm start
 
-### Quick Start
+# Run linter
+pnpm lint
 
-```bash
-# Format before committing
+# Format code
 pnpm format
 
-# Good commit messages ✅
-git commit -m "feat: add homepage hero section"
-git commit -m "fix(navigation): resolve mobile menu bug"
-git commit -m "docs: update installation guide"
-
-# Bad commit messages ❌
-git commit -m "Added feature"     # No type, wrong tense
-git commit -m "feat: Add feature" # Capitalized subject
-git commit -m "feat: add feature." # Period at end
+# Check formatting
+pnpm format:check
 ```
-
-### Documentation
-
-- [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
-- [FORMATTING.md](.github/FORMATTING.md) - Formatting standards
-
-## Automation
-
-This project includes automated:
-
-- **Dependency Updates:** Weekly Dependabot PRs
-- **Auto-Merge:** Automatic approval and merging of patch/minor
-  updates
-- **Version Bumping:** Automated patch version bumps using Cocogitto
-- **Changelog Generation:** Automatic changelog from conventional
-  commits
-- **GitHub Releases:** Automatic release creation with generated notes
-
-See [VERSIONING.md](.github/VERSIONING.md) for details.
 
 ## Project Structure
 
 ```
 ekgf-website/
-├── .github/              # GitHub Actions workflows and reusable actions
-├── .husky/               # Git hooks (commit-msg, pre-commit)
-├── public/               # Static assets
 ├── src/
-│   ├── app/             # Next.js App Router pages
-│   └── lib/             # Utility functions
-├── cog.toml             # Cocogitto configuration
-├── commitlint.config.js # Commit message linting rules
-└── package.json         # Dependencies and scripts
+│   ├── app/                   # Next.js App Router
+│   │   ├── about/            # About page
+│   │   ├── contact/          # Contact page
+│   │   ├── resources/        # Resources page
+│   │   ├── dprod/            # DPROD explanation page
+│   │   ├── method/           # Method redirect
+│   │   ├── catalog/          # Catalog redirect
+│   │   ├── maturity/         # Maturity redirect
+│   │   ├── principles/       # Principles redirect
+│   │   ├── actions/          # Server Actions
+│   │   ├── layout.tsx        # Root layout
+│   │   ├── page.tsx          # Home page
+│   │   ├── globals.css       # Global styles
+│   │   ├── sitemap.ts        # Sitemap generation
+│   │   └── robots.ts         # Robots.txt generation
+│   ├── components/           # React components
+│   │   ├── ui/              # shadcn/ui components
+│   │   ├── Header.tsx       # Site header
+│   │   ├── Footer.tsx       # Site footer
+│   │   ├── Hero.tsx         # Hero section
+│   │   ├── DocumentationGrid.tsx
+│   │   ├── ContactForm.tsx
+│   │   └── theme-provider.tsx
+│   └── lib/                  # Utilities
+│       └── utils.ts         # Helper functions
+├── public/                   # Static assets
+│   └── ekgf-logo-*.svg      # Logos
+├── .github/                  # GitHub workflows
+├── DEPLOYMENT.md            # Deployment guide
+├── vercel.json              # Vercel configuration
+└── package.json
 ```
 
-## Documentation
+## Color Scheme
 
-- [Contributing Guidelines](CONTRIBUTING.md)
-- [pnpm Configuration](.github/PNPM_CONFIG.md)
-- [Formatting Standards](.github/FORMATTING.md)
-- [Versioning & Release Process](.github/VERSIONING.md)
-- [Cocogitto Bump Verification](.github/COG_BUMP_VERIFICATION.md)
-- [Commit Message Convention](.github/COMMIT_CONVENTION.md)
-- [GitHub Actions](.github/actions/README.md)
-- [Automation Summary](.github/AUTOMATION_SUMMARY.md)
+The site uses EKGF's brand colors:
 
-## Resources
+- **Primary**: `#4051b5` (Indigo) - Main brand color
+- **Primary Light**: `#5c6bc0` - Lighter variant for dark mode
+- **Primary Dark**: `#303f9f` - Darker variant
+- **Accent**: `#ff6f00` - Orange accent
+- **Accent Light**: `#ff9800` - Lighter orange
+- **Accent Dark**: `#e65100` - Darker orange
 
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Conventional Commits](https://www.conventionalcommits.org/)
-- [Angular Commit Guidelines](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit)
-- [Cocogitto Documentation](https://docs.cocogitto.io/)
+These match the colors used in the existing MkDocs documentation
+sites.
+
+## Typography
+
+- **Sans Serif**: Roboto (300, 400, 500, 700 weights)
+- **Monospace**: Roboto Mono
+
+## Deployment
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment
+instructions.
+
+### Quick Deploy to Vercel
+
+1. Push code to GitHub
+2. Import project in Vercel
+3. Deploy automatically
+4. Configure custom domain
+
+## Environment Variables
+
+See `.env.example` for all available environment variables.
+
+Optional variables:
+
+- `RESEND_API_KEY` - For email functionality (contact form)
+- `NEXT_PUBLIC_SITE_URL` - Site URL for metadata
+
+## Contact Form
+
+The contact form uses Next.js Server Actions for form handling. Email
+integration with [Resend](https://resend.com) is prepared but
+commented out in `/src/app/actions/contact.ts`.
+
+To enable email sending:
+
+1. Sign up for Resend
+2. Add and verify domain
+3. Add `RESEND_API_KEY` to environment variables
+4. Uncomment Resend code in `contact.ts`
+5. Install Resend: `pnpm add resend`
+
+## SEO
+
+The site includes:
+
+- Comprehensive meta tags
+- Open Graph tags for social sharing
+- Twitter Card tags
+- Google Analytics (G-9LCW4TSSRP)
+- Sitemap at `/sitemap.xml`
+- Robots.txt at `/robots.txt`
+- Google Search Console verification
 
 ## License
 
-MIT License - Copyright (c) 2026 Object Management Group, Inc.
-(OMG)
+Copyright © 2025 Object Management Group®, OMG® | All Rights Reserved
 
-See [LICENSE](LICENSE) file for details.
+## Partnership
+
+This project is a partnership between:
+
+- [Enterprise Knowledge Graph Foundation (EKGF)](https://ekgf.org)
+- [Object Management Group (OMG)](https://omg.org)
+
+## Support
+
+- **Documentation**: Check the `/docs` folder
+- **Issues**:
+  [GitHub Issues](https://github.com/EKGF/ekgf-website/issues)
+- **Contact**: Use the contact form on the website
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.

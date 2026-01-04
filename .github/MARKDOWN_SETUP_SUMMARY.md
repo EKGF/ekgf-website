@@ -215,7 +215,7 @@ markdownlint path/to/file.md
 | configured         |
 | **ekg-principles** | 140                        | Not configured | markdownlint     |
 | **ekgf-website**   | **70**                     | **Prettier**   | **markdownlint** |
-|  |
+|                    |
 
 ## Migration Notes
 
