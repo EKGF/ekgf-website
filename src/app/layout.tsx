@@ -20,7 +20,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Enterprise Knowledge Graph Foundation | EKGF",
+  title: "Enterprise Knowledge Graph | EKGF",
   description:
     "Promoting semantic standards and best practices to support the growing enterprise knowledge graph marketplace. Explore the Use Case Tree Method, EKG Catalog, Maturity Model, and Principles.",
   keywords: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Enterprise Knowledge Graph Foundation",
+    title: "Enterprise Knowledge Graph",
     description:
       "Promoting semantic standards and best practices for enterprise knowledge graphs",
     url: "https://ekgf.org",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enterprise Knowledge Graph Foundation",
+    title: "Enterprise Knowledge Graph",
     description:
       "Promoting semantic standards and best practices for enterprise knowledge graphs",
     site: "@EKG_Foundation",

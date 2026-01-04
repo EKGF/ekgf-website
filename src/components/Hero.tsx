@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#303f9f] via-[#4051b5] to-[#5c6bc0] py-20 md:py-32">
+    <section className="relative overflow-hidden bg-linear-to-br from-[#303f9f] via-[#4051b5] to-[#5c6bc0] py-20 md:py-32">
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Enterprise Knowledge Graph Foundation
+            Enterprise Knowledge Graph
           </h1>
           <p className="mb-8 text-xl text-white/95 md:text-2xl">
             Promoting semantic standards and best practices to support
@@ -40,8 +40,8 @@ export function Hero() {
       </div>
 
       {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
-      <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-transparent via-transparent to-background/50" />
+      <div className="absolute inset-0 bg-grid-white/[0.05] bg-size-[20px_20px]" />
+      <div className="absolute left-0 top-0 h-full w-full bg-linear-to-b from-transparent via-transparent to-background/50" />
     </section>
   );
 }

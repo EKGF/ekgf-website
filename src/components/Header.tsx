@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -18,17 +18,17 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/90">
-      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center space-x-2">
+      <div className="container flex h-20 items-center justify-between px-4 md:px-6">
+        <div className="flex items-center gap-8">
+          <Link href="/" className="flex items-center group gap-0">
             <Image
               src="/ekgf-logo-symbol.svg"
               alt="EKGF Logo"
-              width={32}
-              height={32}
-              className="h-8 w-8"
+              width={56}
+              height={56}
+              className="h-14 w-14 -mr-5 transition-transform group-hover:scale-110"
             />
-            <span className="hidden font-bold sm:inline-block">
+            <span className="hidden text-3xl font-black tracking-tighter leading-none relative top-[-6px] sm:inline-block">
               EKGF
             </span>
           </Link>
@@ -41,6 +41,14 @@ export function Header() {
                   className={navigationMenuTriggerStyle()}
                 >
                   <Link href="/about">About</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/team">Team</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -86,17 +94,44 @@ export function Header() {
 
           <Button
             asChild
-            variant="default"
+            variant="ghost"
+            size="icon"
             className="hidden sm:flex"
           >
             <a
               href="https://github.com/EKGF"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
             >
-              GitHub
+              <Github className="h-5 w-5" />
             </a>
           </Button>
+
+          <a
+            href="https://omg.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Object Management Group (OMG)"
+            className="hidden sm:flex items-center rounded-md px-2 py-1 opacity-80 hover:opacity-100 transition-opacity"
+          >
+            <Image
+              src="/omg-sdo-logo.svg"
+              alt="OMG"
+              width={148}
+              height={20}
+              className="h-6 w-auto dark:hidden"
+              unoptimized
+            />
+            <Image
+              src="/omg-sdo-logo-dark.svg"
+              alt="OMG"
+              width={148}
+              height={20}
+              className="hidden h-6 w-auto dark:block"
+              unoptimized
+            />
+          </a>
         </div>
       </div>
     </header>

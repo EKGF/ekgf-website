@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Building2, Users, Target, Handshake } from "lucide-react";
+import {
+  Building2,
+  Users,
+  Target,
+  Handshake,
+  Github,
+} from "lucide-react";
 
 export const metadata = {
   title: "About | EKGF",
   description:
-    "Learn about the Enterprise Knowledge Graph Foundation and our mission to promote semantic standards and best practices.",
+    "Learn about the Enterprise Knowledge Graph Forum and our mission to promote semantic standards and best practices.",
 };
 
 export default function AboutPage() {
@@ -18,11 +24,125 @@ export default function AboutPage() {
 
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <p className="text-xl text-muted-foreground mb-8">
-            The Enterprise Knowledge Graph Foundation (EKGF) is a
-            non-profit organization dedicated to promoting semantic
-            standards and best practices to support the growing
-            enterprise knowledge graph marketplace.
+            The Enterprise Knowledge Graph Forum (EKGF) is an
+            initiative under the Object Management Group® (OMG®),
+            established to define best practices and mature the
+            marketplace for Enterprise Knowledge Graph (EKG) adoption.
           </p>
+
+          <p>
+            We were founded by industry practitioners who wanted a
+            simple outcome: make Enterprise Knowledge Graph work
+            easier in the real world. Inside OMG, we deliver that
+            through a two-track model—so you can participate at the
+            level that fits your organization.
+          </p>
+
+          <div className="my-10 grid gap-6 md:grid-cols-2 not-prose">
+            <div className="rounded-lg border bg-background/60 p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                EKGF Managed Community (the main community)
+              </h3>
+              <p className="text-muted-foreground">
+                This is the outward-facing home for members and
+                practitioners. It’s where most collaboration happens
+                and where the bulk of EKGF work products are
+                developed.
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                For the authoritative definition and guidance on EKG,
+                start with{" "}
+                <Link
+                  href="/principles"
+                  className="text-primary hover:underline"
+                >
+                  EKG Principles
+                </Link>
+                .
+              </p>
+              <p className="mt-2 text-sm">
+                <a
+                  href="https://www.omg.org/communities/enterprise-knowledge-graph-forum.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  View the EKGF Managed Community listing at OMG
+                </a>
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                <li>Practical guidance and best practices</li>
+                <li>Reusable artifacts and reference materials</li>
+                <li>
+                  Work products like the{" "}
+                  <Link
+                    href="/principles"
+                    className="text-primary hover:underline"
+                  >
+                    Principles
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/method"
+                    className="text-primary hover:underline"
+                  >
+                    Method
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/maturity"
+                    className="text-primary hover:underline"
+                  >
+                    Maturity Model
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/catalog"
+                    className="text-primary hover:underline"
+                  >
+                    Catalog
+                  </Link>
+                  , and{" "}
+                  <Link
+                    href="/dprod"
+                    className="text-primary hover:underline"
+                  >
+                    DPROD
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="rounded-lg border bg-background/60 p-6">
+              <h3 className="text-xl font-semibold mb-2">
+                EKG Platform Task Force (EKGPTF) (standards track)
+              </h3>
+              <p className="text-muted-foreground">
+                A small OMG Standards Development Organization (SDO)
+                task force focused on formal standardization—turning
+                community best practices into OMG specifications,
+                reference models, and discussion papers.
+              </p>
+              <p className="mt-3 text-sm">
+                <a
+                  href="https://www.omg.org/ekg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Learn more about EKGPTF at OMG
+                </a>
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                <li>Formal standardization track inside OMG</li>
+                <li>Works closely with the EKGF Managed Community</li>
+              </ul>
+              <p className="mt-4 text-sm text-muted-foreground">
+                If you’re new here, start with the EKGF Managed
+                Community and its initiatives.
+              </p>
+            </div>
+          </div>
 
           <div className="grid gap-8 sm:grid-cols-2 my-12 not-prose">
             <div className="rounded-lg border p-6">
@@ -31,9 +151,9 @@ export default function AboutPage() {
                 Our Organization
               </h3>
               <p className="text-muted-foreground">
-                A partnership with the Object Management Group (OMG),
-                establishing standards for enterprise knowledge
-                graphs.
+                EKGF is part of OMG’s standards ecosystem—bringing
+                practitioners together to advance EKG standards,
+                guidance, and adoption.
               </p>
             </div>
 
@@ -43,8 +163,11 @@ export default function AboutPage() {
                 Our Mission
               </h3>
               <p className="text-muted-foreground">
-                To advance semantic technology adoption and provide
-                shared infrastructure for evaluating data quality.
+                To make Enterprise Knowledge Graph adoption practical
+                and sustainable—by publishing community-driven
+                guidance (Principles, Method, Maturity Model, Catalog,
+                DPROD), promoting semantic interoperability, and
+                shaping standards with OMG where it matters.
               </p>
             </div>
 
@@ -110,23 +233,24 @@ export default function AboutPage() {
           </p>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">
-            Partnership with OMG
+            EKGF within OMG
           </h2>
 
           <p>
-            EKGF operates in partnership with the{" "}
+            EKGF is an initiative under the{" "}
             <a
               href="https://omg.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#4051b5] hover:text-[#5c6bc0] font-semibold"
+              className="text-primary hover:underline font-semibold"
             >
               Object Management Group (OMG)
             </a>
-            , a leading international consortium that develops
-            enterprise integration standards. This partnership ensures
-            that our work aligns with established industry standards
-            and reaches a global audience of practitioners.
+            . EKGF is an OMG Managed Community, and we work closely
+            with the Enterprise Knowledge Graph Platform Task Force
+            (EKGPTF) on formal standardization matters—while the bulk
+            of day-to-day collaboration continues within the EKGF
+            community.
           </p>
 
           <div className="mt-12 rounded-lg bg-muted p-8 not-prose">
@@ -144,8 +268,10 @@ export default function AboutPage() {
                   href="https://github.com/EKGF"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex items-center gap-2"
                 >
-                  View on GitHub
+                  <Github className="h-4 w-4" />
+                  GitHub
                 </a>
               </Button>
             </div>

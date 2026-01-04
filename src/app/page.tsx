@@ -1,11 +1,13 @@
 import { Hero } from "@/components/Hero";
 import { DocumentationGrid } from "@/components/DocumentationGrid";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <DocumentationGrid />
+      <Testimonials />
       <section className="py-16 bg-muted/30">
         <div className="container max-w-screen-2xl">
           <div className="mx-auto max-w-3xl text-center">
@@ -13,26 +15,25 @@ export default function HomePage() {
               About EKGF
             </h2>
             <p className="mb-4 text-lg text-muted-foreground">
-              The Enterprise Knowledge Graph Foundation (EKGF) is a
-              non-profit organization dedicated to promoting semantic
-              standards and best practices to support the growing
-              enterprise knowledge graph marketplace.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              EKGF focuses on the growth of semantic technology, the
-              adoption of best practices, and the implementation of a
-              shared infrastructure for evaluating data quality. In
-              partnership with the{" "}
+              The Enterprise Knowledge Graph Forum (EKGF) is an
+              initiative under the{" "}
               <a
                 href="https://omg.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-[#4051b5] hover:text-[#5c6bc0] transition-colors"
+                className="font-semibold text-primary hover:underline"
               >
                 Object Management Group (OMG)
               </a>
-              , we provide comprehensive guidance for implementing
-              enterprise knowledge graphs.
+              , established to define best practices and mature the
+              marketplace for Enterprise Knowledge Graph (EKG)
+              adoption.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Our work spans standards, methods, reusable artifacts,
+              community engagement, and advocacy—helping teams design,
+              build, and improve enterprise knowledge graphs over
+              time.
             </p>
           </div>
         </div>

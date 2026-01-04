@@ -9,8 +9,8 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">About EKGF</h3>
             <p className="text-sm text-muted-foreground">
-              Enterprise Knowledge Graph Foundation - Promoting
-              semantic standards and best practices.
+              Enterprise Knowledge Graph - Promoting semantic
+              standards and best practices.
             </p>
           </div>
 
@@ -19,6 +19,14 @@ export function Footer() {
               Documentation
             </h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/dprod"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  DPROD
+                </Link>
+              </li>
               <li>
                 <a
                   href="https://method.ekgf.org"
@@ -75,6 +83,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/team"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/quadrants"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -102,8 +118,9 @@ export function Footer() {
                   href="https://github.com/EKGF"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
+                  <Github className="h-4 w-4" />
                   GitHub
                 </a>
               </li>
@@ -150,7 +167,7 @@ export function Footer() {
             Group®, OMG® | All Rights Reserved
           </p>
           <p className="mt-2">
-            A partnership with{" "}
+            An initiative under{" "}
             <a
               href="https://omg.org"
               target="_blank"

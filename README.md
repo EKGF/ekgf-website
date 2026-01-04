@@ -258,7 +258,7 @@ Copyright © 2025 Object Management Group®, OMG® | All Rights Reserved
 
 This project is a partnership between:
 
-- [Enterprise Knowledge Graph Foundation (EKGF)](https://ekgf.org)
+- [Enterprise Knowledge Graph (EKGF)](https://ekgf.org)
 - [Object Management Group (OMG)](https://omg.org)
 
 ## Support

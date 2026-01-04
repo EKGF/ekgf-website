@@ -10,7 +10,7 @@ import {
 export const metadata = {
   title: "Contact | EKGF",
   description:
-    "Get in touch with the Enterprise Knowledge Graph Foundation team. We are here to help with your EKG journey.",
+    "Get in touch with the Enterprise Knowledge Graph Forum team. We are here to help with your EKG journey.",
 };
 
 export default function ContactPage() {
@@ -59,7 +59,9 @@ export default function ContactPage() {
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-[#4051b5] mt-0.5" />
                   <div>
-                    <p className="font-medium">Partnership</p>
+                    <p className="font-medium">
+                      Initiative under OMG
+                    </p>
                     <p className="text-sm text-muted-foreground">
                       Object Management Group
                     </p>
@@ -67,7 +69,7 @@ export default function ContactPage() {
                       href="https://omg.org"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-[#4051b5] hover:text-[#5c6bc0] transition-colors"
+                      className="text-sm text-primary hover:underline transition-colors"
                     >
                       omg.org
                     </a>
@@ -103,15 +105,15 @@ export default function ContactPage() {
                   href="https://github.com/EKGF"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-[#4051b5] transition-colors"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Github className="h-5 w-5" />
-                  <span>EKGF</span>
+                  <span>GitHub</span>
                 </a>
               </div>
             </div>
 
-            <div className="rounded-lg bg-gradient-to-br from-[#4051b5] to-[#303f9f] p-6 text-white">
+            <div className="rounded-lg bg-linear-to-br from-[#4051b5] to-[#303f9f] p-6 text-white">
               <h3 className="mb-2 text-lg font-semibold">
                 Looking for documentation?
               </h3>
