@@ -61,7 +61,8 @@ export default function ResourcesPage() {
                     EKG Catalog
                   </CardTitle>
                   <CardDescription>
-                    Components, patterns, and implementation guidance
+                    Example Use Cases, Components, patterns, and
+                    implementation guidance
                   </CardDescription>
                   <ExternalLink className="h-4 w-4 ml-auto text-muted-foreground" />
                 </CardHeader>
@@ -76,7 +77,7 @@ export default function ResourcesPage() {
                     Maturity Model
                   </CardTitle>
                   <CardDescription>
-                    Assessment framework for EKG implementations
+                    Assessment framework for EKG readiness
                   </CardDescription>
                   <ExternalLink className="h-4 w-4 ml-auto text-muted-foreground" />
                 </CardHeader>
@@ -91,7 +92,8 @@ export default function ResourcesPage() {
                     Principles & Manifesto
                   </CardTitle>
                   <CardDescription>
-                    Core principles for EKG development
+                    Core principles for EKG data- &
+                    technology-architecture
                   </CardDescription>
                   <ExternalLink className="h-4 w-4 ml-auto text-muted-foreground" />
                 </CardHeader>

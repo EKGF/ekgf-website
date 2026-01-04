@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function CatalogRedirectPage() {
-  redirect("https://catalog.ekgf.org");
+  redirect("https://catalog.ekgf.org/use-case/client-360/");
 }

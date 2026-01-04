@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function PrinciplesRedirectPage() {
-  redirect("https://principles.ekgf.org");
+  redirect("https://principles.ekgf.org/principle/#10-principles");
 }

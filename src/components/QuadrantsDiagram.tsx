@@ -17,7 +17,7 @@ const quadrants = [
     axisY: "How",
     description:
       "Reusable capability components and patterns for your EKG.",
-    href: "https://catalog.ekgf.org",
+    href: "https://catalog.ekgf.org/use-case/client-360/",
     position: "top-right",
   },
   {
@@ -26,7 +26,7 @@ const quadrants = [
     axisY: "Why",
     description:
       "Guiding principles and manifesto for enterprise knowledge graphs.",
-    href: "https://principles.ekgf.org",
+    href: "https://principles.ekgf.org/principle/#10-principles",
     position: "bottom-left",
   },
   {
@@ -50,7 +50,7 @@ export function QuadrantsDiagram() {
         The EKG quadrants diagram
       </h2>
 
-      <div className="relative mx-auto max-w-screen-xl aspect-square md:aspect-[4/3] lg:aspect-[16/9]">
+      <div className="relative mx-auto max-w-7xl aspect-square md:aspect-4/3 lg:aspect-video">
         {/* Main Grid Container */}
         <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 border border-foreground/20 rounded-lg overflow-hidden bg-card/10 backdrop-blur-sm">
           {quadrants.map((q) => (

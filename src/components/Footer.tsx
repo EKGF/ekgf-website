@@ -40,7 +40,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://catalog.ekgf.org"
+                  href="https://catalog.ekgf.org/use-case/client-360/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
@@ -60,7 +60,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://principles.ekgf.org"
+                  href="https://principles.ekgf.org/principle/#10-principles"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"

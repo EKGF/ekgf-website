@@ -26,7 +26,7 @@ const documentationSites = [
     description:
       "Browse the catalog of EKG components, patterns, and best practices for building knowledge graphs.",
     url: "/catalog",
-    externalUrl: "https://catalog.ekgf.org",
+    externalUrl: "https://catalog.ekgf.org/use-case/client-360/",
     icon: Database,
   },
   {
@@ -42,7 +42,8 @@ const documentationSites = [
     description:
       "Core principles and manifesto for Enterprise Knowledge Graphs, guiding strategic implementation.",
     url: "/principles",
-    externalUrl: "https://principles.ekgf.org",
+    externalUrl:
+      "https://principles.ekgf.org/principle/#10-principles",
     icon: Lightbulb,
   },
   {
