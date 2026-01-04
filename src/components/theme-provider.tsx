@@ -18,7 +18,7 @@ function setCookie(name: string, value: string) {
   if (typeof document === "undefined") return;
   const host =
     typeof window !== "undefined" ? window.location.hostname : "";
-  const domain = host.endsWith(".ekgf.org")
+  const domain = host === "ekgf.org" || host.endsWith(".ekgf.org")
     ? "; domain=.ekgf.org"
     : "";
   document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=31536000; samesite=lax${domain}`;

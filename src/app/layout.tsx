@@ -66,6 +66,13 @@ export default function RootLayout({
           name="google-site-verification"
           content="Q_9d2He8XxoBrVAXrAXsEm2R_UrGZ6KcOCXkeNRQ058"
         />
+        <script
+          // Keep theme consistent across *.ekgf.org via shared cookie.
+          // This runs before hydration to minimize "flash" on first paint.
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var m=document.cookie.match(/(^|;\\s*)ekgf-theme=([^;]*)/);var t=m?decodeURIComponent(m[2]):"";if(t==="dark"||t==="light"){try{localStorage.setItem("theme",t)}catch(e){};if(t==="dark"){document.documentElement.classList.add("dark");document.documentElement.classList.remove("light");}else{document.documentElement.classList.add("light");document.documentElement.classList.remove("dark");}}}catch(e){}})();`,
+          }}
+        />
       </head>
       <body
         className={`${roboto.variable} ${robotoMono.variable} font-sans antialiased`}
