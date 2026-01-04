@@ -42,17 +42,53 @@ Vercel.
    git push -u origin main
    ```
 
-## Step 2: Import Project to Vercel
+## Step 2: Link the project to Vercel (CLI)
 
-1. Go to [vercel.com](https://vercel.com) and sign in
-2. Click "Add New..." → "Project"
-3. Import the `EKGF/ekgf-website` repository
-4. Configure the project:
-   - **Framework Preset**: Next.js (auto-detected)
-   - **Root Directory**: `./` (leave default)
-   - **Build Command**: `pnpm run build` (auto-detected)
-   - **Output Directory**: `.next` (auto-detected)
-   - **Install Command**: `pnpm install` (auto-detected)
+This repo is configured for Vercel via the Vercel CLI.
+
+1. Install / run the CLI:
+
+   ```bash
+   pnpm dlx vercel@latest --version
+   ```
+
+2. Authenticate (if needed):
+
+   ```bash
+   vercel whoami
+   vercel login
+   ```
+
+3. Link the local folder to the Vercel project:
+
+   ```bash
+   vercel link
+   ```
+
+   This creates a `.vercel/` folder (do not commit it).
+
+4. Pull project settings and environment variables:
+
+   ```bash
+   vercel pull --yes --environment=production
+   vercel pull --yes --environment=preview
+   ```
+
+5. Deploy:
+
+   ```bash
+   vercel deploy
+   vercel deploy --prod
+   ```
+
+### Alternative: import via the Vercel dashboard
+
+If you prefer the UI:
+
+- Go to [vercel.com](https://vercel.com) and sign in
+- Click "Add New..." → "Project"
+- Import the `EKGF/ekgf-website` repository
+- Confirm defaults (Next.js / `pnpm`)
 
 ## Step 3: Configure Environment Variables
 

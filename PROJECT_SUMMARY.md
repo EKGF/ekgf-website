@@ -67,7 +67,8 @@ All cards link to existing documentation sites:
 - `method.ekgf.org` - Use Case Tree Method
 - `catalog.ekgf.org` - EKG Catalog
 - `maturity.ekgf.org` - Maturity Model
-- `principles.ekgf.org` - Principles & Manifesto
+- `principles.ekgf.org/principle/#10-principles` - Principles &
+  Manifesto
 
 ## 📦 Project Structure
 

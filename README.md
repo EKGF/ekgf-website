@@ -11,11 +11,13 @@ central hub linking to all documentation sites:
 
 - **Method**: [method.ekgf.org](https://method.ekgf.org) - Use Case
   Tree Method
-- **Catalog**: [catalog.ekgf.org](https://catalog.ekgf.org) - EKG
+- **Catalog**:
+  [Client 360](https://catalog.ekgf.org/use-case/client-360/) - EKG
   Catalog
 - **Maturity**: [maturity.ekgf.org](https://maturity.ekgf.org) -
   Maturity Model
-- **Principles**: [principles.ekgf.org](https://principles.ekgf.org) -
+- **Principles**:
+  [Principles](https://principles.ekgf.org/principle/#10-principles) -
   Principles & Manifesto
 - **DPROD**: [ekgf.github.io/dprod](https://ekgf.github.io/dprod) -
   Data Product Ontology
@@ -108,7 +110,7 @@ specification at `https://ekgf.github.io/dprod/`.
 
 ### Prerequisites
 
-- Node.js 20+
+- Node.js 24
 - pnpm 10+
 
 ### Installation
@@ -148,7 +150,7 @@ pnpm format:check
 
 ## Project Structure
 
-```
+```text
 ekgf-website/
 ├── src/
 │   ├── app/                   # Next.js App Router
