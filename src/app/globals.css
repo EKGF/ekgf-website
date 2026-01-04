@@ -87,7 +87,9 @@
 
 .dark {
   /* Ultra-Soft Obsidian - Low Contrast & Stylish */
-  --background: hsl(240 10% 8%); /* Slightly lighter than pure black */
+  --background: hsl(
+    240 10% 8%
+  ); /* Slightly lighter than pure black */
   --foreground: hsl(240 5% 70%); /* Muted grey, not white */
   --card: hsl(240 10% 10%);
   --card-foreground: hsl(240 5% 70%);
