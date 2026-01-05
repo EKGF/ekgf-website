@@ -29,3 +29,6 @@ yarn.lock
 # Generated files
 CHANGELOG.md
 CHANGELOG_RELEASE.md
+
+# License files (legal text, should not be reformatted)
+LICENSE

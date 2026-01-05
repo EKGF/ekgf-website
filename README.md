@@ -254,14 +254,27 @@ The site includes:
 
 ## License
 
-Copyright © 2025 Object Management Group®, OMG® | All Rights Reserved
+```text
+Copyright (c) 2026 EDMCouncil Inc., d/b/a Enterprise Data Management Association ("EDMA")
+```
+
+This work is licensed under a
+[Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+When using or sharing this content, please provide attribution to:
+
+- EDMCouncil Inc., d/b/a Enterprise Data Management Association
+  ("EDMA")
 
 ## Partnership
 
 This project is a partnership between:
 
-- [Enterprise Knowledge Graph (EKGF)](https://ekgf.org)
-- [Object Management Group (OMG)](https://omg.org)
+- [Enterprise Knowledge Graph Forum (EKGF)](https://ekgf.org) - an
+  initiative of the Object Management Group (OMG)
+- [Object Management Group (OMG)](https://omg.org) - now part of
+  EDMCouncil Inc., d/b/a Enterprise Data Management Association
+  ("EDMA")
 
 ## Support
 

@@ -172,11 +172,32 @@ export function Footer() {
 
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
           <p>
-            Copyright © {new Date().getFullYear()} Object Management
-            Group®, OMG® | All Rights Reserved
+            Copyright © {new Date().getFullYear()} EDMCouncil Inc.,
+            d/b/a Enterprise Data Management Association (&quot;EDMA&quot;)
           </p>
           <p className="mt-2">
-            An initiative under{" "}
+            This work is licensed under a{" "}
+            <a
+              href="https://creativecommons.org/licenses/by-sa/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              Creative Commons Attribution-ShareAlike 4.0
+              International License
+            </a>
+          </p>
+          <p className="mt-2">
+            An initiative of the{" "}
+            <a
+              href="https://ekgf.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              Enterprise Knowledge Graph Forum (EKGF)
+            </a>
+            , under{" "}
             <a
               href="https://omg.org"
               target="_blank"

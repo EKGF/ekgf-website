@@ -13,7 +13,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "lint:md": "markdownlint '**/*.md' --ignore node_modules --ignore .husky",
+    "lint:md": "markdownlint '**/*.md' --ignore node_modules --ignore .husky --ignore LICENSE",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "format:md": "prettier --write '**/*.md'",
