@@ -1,5 +1,7 @@
 ---
-globs: *.md,*.yml,*.yaml
+description:
+  YAML and frontmatter formatting rules for ekgf.org content.
+globs: "**/*.md,**/*.yml,**/*.yaml"
 alwaysApply: false
 ---
 

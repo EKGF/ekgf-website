@@ -1,5 +1,6 @@
 ---
-globs: *.md
+description: Markdown formatting rules for ekgf.org content.
+globs: "**/*.md,**/*.mdx"
 alwaysApply: false
 ---
 
@@ -15,8 +16,8 @@ alwaysApply: false
 ## Line Wrapping
 
 1. **Enable automatic wrapping** for prose content
-2. **Preserve hard wraps** - don't reflowa manually wrapped text
-   unless explicitly asked
+2. **Preserve hard wraps** - don't reflow manually wrapped text unless
+   explicitly asked
 3. **Break at word boundaries** - never break in middle of words
 
 ## Trailing Whitespace
