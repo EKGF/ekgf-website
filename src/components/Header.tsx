@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Moon, Sun, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { EkgfLogoSymbol } from "@/components/icons/EkgfLogoSymbol";
+import { OmgLogo } from "@/components/icons/OmgLogo";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -23,9 +23,9 @@ export function Header() {
         <div className="flex items-center gap-8">
           <Link
             href="/"
-            className="flex items-center group gap-2 text-3xl leading-none"
+            className="flex items-center group gap-2 text-3xl leading-none transform -translate-y-1.5"
           >
-            <EkgfLogoSymbol className="h-[1em] w-[1em] -translate-y-px transition-transform group-hover:scale-110" />
+            <EkgfLogoSymbol className="h-[1em] w-[1em] transition-transform group-hover:scale-110" />
             <span className="hidden font-black tracking-tighter leading-none sm:inline-block">
               EKGF
             </span>
@@ -111,24 +111,9 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Object Management Group (OMG)"
-            className="hidden sm:flex items-center rounded-md px-2 py-1 opacity-80 hover:opacity-100 transition-opacity"
+            className="hidden sm:flex items-center rounded-md px-2 py-1 opacity-80 hover:opacity-100 transition-opacity transform -translate-y-1"
           >
-            <Image
-              src="/omg-sdo-logo.svg"
-              alt="OMG"
-              width={148}
-              height={20}
-              className="h-6 w-auto dark:hidden"
-              unoptimized
-            />
-            <Image
-              src="/omg-sdo-logo-dark.svg"
-              alt="OMG"
-              width={148}
-              height={20}
-              className="hidden h-6 w-auto dark:block"
-              unoptimized
-            />
+            <OmgLogo className="h-[1.65rem] w-auto" />
           </a>
         </div>
       </div>

@@ -171,21 +171,24 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>
-            Copyright © {new Date().getFullYear()} EDMCouncil Inc.,
-            d/b/a Enterprise Data Management Association (&quot;EDMA&quot;)
-          </p>
-          <p className="mt-2">
-            This work is licensed under a{" "}
+          <p className="mb-2">
             <a
-              href="https://creativecommons.org/licenses/by-sa/4.0/"
+              href="http://creativecommons.org/licenses/by-sa/4.0/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground transition-colors"
+              className="inline-block"
             >
-              Creative Commons Attribution-ShareAlike 4.0
-              International License
+              <img
+                src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg"
+                alt="License: CC BY-SA 4.0"
+                className="inline"
+              />
             </a>
+          </p>
+          <p>
+            Copyright © {new Date().getFullYear()} EDMCouncil Inc.,
+            d/b/a Enterprise Data Management Association
+            (&quot;EDMA&quot;)
           </p>
           <p className="mt-2">
             An initiative of the{" "}
@@ -197,7 +200,7 @@ export function Footer() {
             >
               Enterprise Knowledge Graph Forum (EKGF)
             </a>
-            , under{" "}
+            , a Managed Community of the{" "}
             <a
               href="https://omg.org"
               target="_blank"
