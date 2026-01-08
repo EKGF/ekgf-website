@@ -83,7 +83,7 @@ jobs:
           cache: "pnpm"
 
       - name: Setup Cocogitto
-        uses: ./.github/actions/setup-cocogitto
+        uses: dataroadinc/github-actions/.github/actions/setup-cocogitto@v0.0.1
 
       - name: Get current version
         id: current_version
@@ -107,7 +107,7 @@ jobs:
           echo "✅ Pushed commit and tag v$NEW_VERSION"
 
       - name: Generate changelog
-        uses: ./.github/actions/generate-changelog
+        uses: dataroadinc/github-actions/.github/actions/generate-changelog@v0.0.1
         with:
           release-tag: v${{ env.NEW_VERSION }}
           output-file: CHANGELOG_RELEASE.md
