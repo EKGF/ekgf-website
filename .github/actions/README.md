@@ -1,130 +1,45 @@
 # Reusable GitHub Actions
 
-This directory contains reusable composite actions for the
-ekgf-website project.
+This repository now uses shared actions from
+[dataroadinc/github-actions](https://github.com/dataroadinc/github-actions).
 
-## Available Actions
+## Migration Notice
 
-### setup-cocogitto
+All local actions have been migrated to use the shared actions repository.
+Workflows now reference:
 
-Installs and caches Cocogitto (conventional commits tooling) for
-version management and changelog generation.
+```yaml
+uses: dataroadinc/github-actions/.github/actions/action-name@v0.0.1
+```
 
-**Usage:**
+## Available Shared Actions
+
+See the [shared actions repository](https://github.com/dataroadinc/github-actions)
+for complete documentation of all available actions.
+
+### Actions Used in This Repository
+
+- `setup-cocogitto` - Install Cocogitto for version management
+- `generate-changelog` - Generate changelog from conventional commits
+
+**Note**: The shared actions use `cargo-binstall` for installation, which
+requires Rust/Cargo. For Node.js projects, this is still the recommended
+approach as it provides better caching and consistency.
+
+## Usage
 
 ```yaml
 - name: Setup Cocogitto
-  uses: ./.github/actions/setup-cocogitto
-```
+  uses: dataroadinc/github-actions/.github/actions/setup-cocogitto@v0.0.1
 
-**Features:**
-
-- Downloads and caches cocogitto binary
-- Supports Linux, macOS, and Windows
-- Handles different architectures (x86_64, ARM64)
-- Verifies installation
-
-**Cache Key:** `cocogitto-6.1.0-${{ runner.os }}-${{ runner.arch }}`
-
-### generate-changelog
-
-Generates a changelog from conventional commits using Cocogitto.
-
-**Usage:**
-
-```yaml
 - name: Generate changelog
-  uses: ./.github/actions/generate-changelog
+  uses: dataroadinc/github-actions/.github/actions/generate-changelog@v0.0.1
   with:
-    release-tag: v0.0.1
-    output-file: CHANGELOG_RELEASE.md
+    release-tag: v0.1.0
 ```
 
-**Inputs:**
+## Versioning
 
-- `release-tag` (required): Release tag (e.g., v0.0.1)
-- `output-file` (optional): Output file path (default: CHANGELOG.md)
-
-**Features:**
-
-- Handles existing and non-existing tags
-- Generates changelog from previous tag to HEAD
-- Filters commits by conventional commit type
-- Uses cog.toml configuration
-
-## Local Testing
-
-You can test these actions locally using the scripts directly:
-
-```bash
-# Test changelog generation
-.github/scripts/generate-changelog.sh CHANGELOG.md v0.0.1
-```
-
-## Implementation Details
-
-### Why Composite Actions?
-
-Composite actions are used instead of reusable workflows because:
-
-1. **Faster execution** - No separate job overhead
-2. **Easier caching** - Can cache binaries between steps
-3. **Simpler maintenance** - Single file per action
-4. **Better reusability** - Can be called multiple times in same job
-
-### Binary Caching Strategy
-
-Both actions use GitHub's `actions/cache@v4` to cache binaries:
-
-- **cocogitto**: `~/.local/bin/cog`
-- **Cache lifetime**: Until cache eviction (7 days of inactivity or
-  10GB limit)
-- **Cache key includes**: OS, architecture, and version
-
-This reduces installation time from ~30s to ~2s on cache hits.
-
-### Cross-Platform Support
-
-The actions support:
-
-- **Linux**: x86_64-unknown-linux-musl
-- **macOS**: x86_64-apple-darwin, aarch64-apple-darwin (Apple Silicon)
-- **Windows**: x86_64-pc-windows-msvc
-
-Platform detection is automatic based on `runner.os` and
-`runner.arch`.
-
-## Maintenance
-
-### Updating Cocogitto Version
-
-To update the cocogitto version:
-
-1. Update the `VERSION` variable in `setup-cocogitto/action.yml`
-2. Update the cache key to invalidate old caches
-3. Test on all platforms
-4. Update this README with the new version
-
-### Adding New Actions
-
-When adding new actions:
-
-1. Create a new directory: `.github/actions/action-name/`
-2. Add `action.yml` with metadata and steps
-3. Document in this README
-4. Add to workflows as needed
-5. Test locally if possible
-
-## Related Files
-
-- `cog.toml` - Cocogitto configuration
-- `.github/scripts/generate-changelog.sh` - Standalone changelog
-  script
-- `.github/workflows/auto-version-bump.yml` - Uses both actions
-- `.github/VERSIONING.md` - Versioning documentation
-
-## Resources
-
-- [GitHub Actions Composite Actions](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action)
-- [Cocogitto Documentation](https://docs.cocogitto.io/)
-- [actions/cache Documentation](https://github.com/actions/cache)
+All shared actions support versioning via inputs and environment variables.
+See the [shared actions documentation](https://github.com/dataroadinc/github-actions)
+for details.
