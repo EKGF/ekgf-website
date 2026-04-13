@@ -9,7 +9,7 @@ export default function HomePage() {
       <DocumentationGrid />
       <Testimonials />
       <section className="py-16 bg-muted/30">
-        <div className="container max-w-screen-2xl">
+        <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight">
               What is an Enterprise Knowledge Graph (EKG)?

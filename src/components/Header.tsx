@@ -19,15 +19,17 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/90">
-      <div className="container flex h-20 items-center justify-between px-4 md:px-6">
+      <div className="container flex h-20 items-center justify-between">
         <div className="flex items-center gap-8">
           <Link
             href="/"
-            className="flex items-center group gap-2 text-3xl leading-none transform -translate-y-1.5"
+            className="group flex items-center text-3xl leading-none transform -translate-y-1.5"
           >
-            <EkgfLogoSymbol className="h-[1em] w-[1em] transition-transform group-hover:scale-110" />
-            <span className="hidden font-black tracking-tighter leading-none sm:inline-block">
-              EKGF
+            <span className="relative inline-flex items-baseline">
+              <EkgfLogoSymbol className="absolute right-full mr-2 h-[1em] w-[1em] transition-transform group-hover:scale-110" />
+              <span className="hidden font-black tracking-tighter leading-none sm:inline-block">
+                EKGF
+              </span>
             </span>
           </Link>
 

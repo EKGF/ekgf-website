@@ -62,7 +62,7 @@ export const Testimonials = ({
 }) => {
   return (
     <section className={cn("py-16 md:py-24 bg-muted/30", className)}>
-      <div className="container max-w-screen-2xl">
+      <div className="container">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Testimonials
