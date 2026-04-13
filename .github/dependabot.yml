@@ -5,9 +5,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "monday"
-      time: "02:00"
-      timezone: "UTC"
+      day: "sunday"
+      time: "22:00"
+      timezone: "Etc/UTC"
     open-pull-requests-limit: 10
     groups:
       # Group all non-breaking updates together
@@ -29,9 +29,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "monday"
-      time: "02:00"
-      timezone: "UTC"
+      day: "sunday"
+      time: "22:00"
+      timezone: "Etc/UTC"
     commit-message:
       prefix: "ci"
       include: "scope"
