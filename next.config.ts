@@ -25,10 +25,19 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   async rewrites() {
     return [
-      // /dprod → /dprod (bare, goes to the zone's landing page)
+      // Both the bare form and the slashed form of /dprod must route to
+      // the slashed form on the zone — the dprod zone also has
+      // trailingSlash: true, so sending the bare form would make it 308
+      // to /dprod/, which would then bubble back here as a redirect loop.
+      // Keeping the destination canonical (with trailing slash) avoids
+      // that round-trip.
       {
         source: "/dprod",
-        destination: `${DPROD_ORIGIN}/dprod`,
+        destination: `${DPROD_ORIGIN}/dprod/`,
+      },
+      {
+        source: "/dprod/",
+        destination: `${DPROD_ORIGIN}/dprod/`,
       },
       // /dprod/anything → same path on the zone
       {
