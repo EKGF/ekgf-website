@@ -39,10 +39,12 @@ const nextConfig: NextConfig = {
         source: "/dprod/",
         destination: `${DPROD_ORIGIN}/dprod/`,
       },
-      // /dprod/anything → same path on the zone
+      // /dprod/anything → same path on the zone, preserving the
+      // trailing slash on the destination so the dprod zone doesn't
+      // 308 it back to us.
       {
-        source: "/dprod/:path*",
-        destination: `${DPROD_ORIGIN}/dprod/:path*`,
+        source: "/dprod/:path+",
+        destination: `${DPROD_ORIGIN}/dprod/:path+/`,
       },
     ];
   },
