@@ -16,6 +16,13 @@ const DPROD_ORIGIN =
   process.env.DPROD_ZONE_ORIGIN ?? "https://dprod.ekgf.vercel.app";
 
 const nextConfig: NextConfig = {
+  // Align with the dprod zone (site/next.config.ts), which sets
+  // trailingSlash: true so its /spec/ URL resolves relative assets
+  // correctly. Without matching here, ekgf.org strips the trailing
+  // slash (default Next.js behavior) while the zone re-adds it, which
+  // produces a /dprod ↔ /dprod/ redirect loop. Use canonical trailing
+  // slashes everywhere on ekgf.org.
+  trailingSlash: true,
   async rewrites() {
     return [
       // /dprod → /dprod (bare, goes to the zone's landing page)
