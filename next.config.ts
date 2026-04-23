@@ -39,12 +39,19 @@ const nextConfig: NextConfig = {
         source: "/dprod/",
         destination: `${DPROD_ORIGIN}/dprod/`,
       },
-      // /dprod/anything → same path on the zone, preserving the
-      // trailing slash on the destination so the dprod zone doesn't
-      // 308 it back to us.
+      // Directory URLs canonicalise with a trailing slash under
+      // trailingSlash: true — match that form explicitly and pass it
+      // through with the slash preserved. Without this, the dprod zone
+      // would 308 the bare form back to us and loop.
+      {
+        source: "/dprod/:path+/",
+        destination: `${DPROD_ORIGIN}/dprod/:path+/`,
+      },
+      // File URLs (e.g. assets/*.jpg, *.ttl) stay slashless — forcing a
+      // trailing slash on these would make the dprod zone 308 back.
       {
         source: "/dprod/:path+",
-        destination: `${DPROD_ORIGIN}/dprod/:path+/`,
+        destination: `${DPROD_ORIGIN}/dprod/:path+`,
       },
     ];
   },
